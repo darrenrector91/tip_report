@@ -31,9 +31,9 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         }
       }
     })
-    .when('/info', {
-      templateUrl: '/views/templates/info.html',
-      controller: 'InfoController as vm',
+    .when('/user', {
+      templateUrl: '/views/templates/user.html',
+      controller: 'TableController as vm',
       resolve: {
         getuser: function (UserService) {
           return UserService.getuser();
