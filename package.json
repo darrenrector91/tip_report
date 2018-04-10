@@ -1,0 +1,36 @@
+{
+  "name": "tip_report",
+  "version": "1.0.0",
+  "description": "Application to record tips earned and hours worked",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrenrector91/tip_report.git"
+  },
+  "author": "Darren Rector",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darrenrector91/tip_report/issues"
+  },
+  "homepage": "https://github.com/darrenrector91/tip_report#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-animate": "^1.6.9",
+    "angular-aria": "^1.6.9",
+    "angular-material": "^1.1.8",
+    "angular-messages": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "bcrypt": "^2.0.0",
+    "body-parser": "^1.18.2",
+    "cookie-session": "^2.0.0-beta.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.14",
+    "nodemon": "^1.17.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
