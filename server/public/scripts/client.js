@@ -1,7 +1,15 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages'])
+  .config(function ($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+      .primaryPalette('blue')
+      .warnPalette('red')
+      .accentPalette('lime')
+      .backgroundPalette('grey')
+      .dark();
+  });
 
 /// Routes ///
-myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       redirectTo: 'home'

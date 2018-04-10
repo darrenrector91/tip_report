@@ -1,4 +1,4 @@
-myApp.service('UserService', ['$http', '$location', function ($http, $location) {
+app.service('UserService', ['$http', '$location', function ($http, $location) {
   console.log('UserService Loaded');
   
   var self = this;
