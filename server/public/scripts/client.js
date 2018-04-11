@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages'])
+var app = angular.module('app', ['ngRoute', 'ngMaterial', 'ngMessages', 'ngTable'])
   .config(function ($mdThemingProvider) {
     $mdThemingProvider.theme('default')
       .primaryPalette('blue')
@@ -33,7 +33,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     })
     .when('/user', {
       templateUrl: '/views/templates/user.html',
-      controller: 'TableController as vm',
+      controller: 'UserController as vm',
       resolve: {
         getuser: function (UserService) {
           return UserService.getuser();

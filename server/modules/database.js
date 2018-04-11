@@ -18,7 +18,7 @@ if (process.env.MONGODB_URI) {
   mongoURI = 'mongodb://localhost:27017/tip_report';
 }
 
-mongoose.connect(mongoURI, { useMongoClient: true });
+mongoose.connect(mongoURI, {});
 
 mongoose.connection.once('open', () => {
   console.log('Mongo connected');

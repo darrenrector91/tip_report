@@ -1,11 +1,40 @@
 <div ng-include="'views/partials/user.header.html'"></div>
 <div class="container">
+    <form class="form-inline">
+        <label class="sr-only" for="inlineFormInputName2">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+        </div>
+
+        <div class="form-check mb-2 mr-sm-2">
+            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+            <label class="form-check-label" for="inlineFormCheck">
+                Remember me
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
     <table ng-table="vm.tableParams" class="table" show-filter="true">
         <tr ng-repeat="user in $data">
-            <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-                {{user.name}}</td>
-            <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
-                {{user.age}}</td>
+            <td title="'Date'" filter="{ date: 'text'}" sortable="'date'">
+                {{user.date}}</td>
+            <td title="'Shift'" filter="{ shift: 'number'}" sortable="'shift'">
+                {{user.shift}}</td>
+            <td title="'Hours Worked'" filter="{ hours: 'text'}" sortable="'hours'">
+                {{user.hours}}</td>
+            <td title="'Gross Tips'" filter="{ gross: 'number'}" sortable="'gross'">
+                {{user.gross}}</td>
+            <td title="'Tip Out'" filter="{ tip_out: 'number'}" sortable="'tip_out'">
+                {{user.tip_out}}</td>
+            <td title="'Net Tips'" filter="{ net: 'number'}" sortable="'net'">
+                {{user.net}}</td>
         </tr>
     </table>
 </div>
